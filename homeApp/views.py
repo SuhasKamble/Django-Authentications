@@ -37,7 +37,7 @@ def handleSignin(request):
         email = request.POST.get('email')
         pass1 = request.POST.get('pass1')
         pass2 = request.POST.get('pass2')
-        if len(username) < 3 or len(fname) < 3 or len(lname) < 3 or len(email) < 3 or len(pass1):
+        if len(username) < 3 :
             messages.error(
                 request, "Every field must have atleast 3 char, Please try again!")
             return redirect('/')
